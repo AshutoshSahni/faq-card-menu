@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --text-blue:hsl(238, 29%, 16%);
+    --text-soft-red:hsl(14, 88%, 65%);
+    --text-very-dark-grayish-blue:hsl(273, 12%, 33%);
+    --text-dark-grayish-blue:hsl(240, 6%, 50%);
+    --background-soft-voilet:hsl(273, 75%, 65%);
+    --background-soft-blue:hsl(240, 73%, 65%);
+}
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    background-color: var(--background-soft-blue);
+}
+
+.faq-female-img {
+    display: none;
+}
+
+.container {
+    display: flex;
+    border-radius: .6rem;
+    align-items: center;
+    justify-content: center;
+    width: max-content;
+    margin:auto;
+    background-color: #ffffff;
+}
+
+.img-part {
+    background-image: url(images/illustration-woman-online-desktop.svg), url(/images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    height:450px;
+    margin:0;
+    padding:0;
+    position: relative;
+    min-width:300px;
+    width: 495px;
+    background-position: -75px center, -580px -276px;
+    display: flex;
+    align-items: center;
+    background-size: 100%, 200%;
+
+}
+
+.faq-part {
+    padding: 50px 50px 50px 0px;
+}
+
+.faq-box {
+    margin-top:123px;
+    margin-left:-90px;
+}
+
+.faq-question {
+    display: block;
+}
+
+.item {
+    border-bottom: 1px solid;
+    line-height: 21px;
+    margin:15px 0px;
+    width:400px;
+    padding:5px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.faq-question:hover{
+    color:var(--text-soft-red);
+}
+
+.faq[open] .faq-question {
+    font-weight: 700;
+    color:var(--text-soft-red);
+} 
+
+.down-arrow-icon {
+    float: right;
+}
+
+p {
+    color: var(--text-very-dark-grayish-blue);
+}
+
+
+@media only screen and (max-width:840px) {
+    .container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 475px;
+        height: auto;
+        margin:auto;
+        margin-top:25%;
+        
+    }
+
+    .faq-female-img {
+        display: block;
+        height: auto;
+        width:350px;
+        margin-top: -200px;
+        transform: rotate(-1.3deg);
+    }
+
+    .img-part {
+        background-image: none, url(images/bg-pattern-mobile.svg);
+        justify-content: center;
+        max-height: 150px;
+        background-position: 75px -4px;
+        background-size: 70%;
+    }
+
+    .faq-box {
+        display: none;
+    }
+
+    .faq-part {
+        padding: 0px 50px 30px 50px;
+    }
+
+    .faq-heading {
+        text-align: center;
+    }
+    
+}
